@@ -1,0 +1,26 @@
+{
+  "name": "voilab-filter",
+  "version": "0.1.0",
+  "description": "Library that can convert an object to a new filtered one, using a key-mapper",
+  "main": "voilab-filter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voilab/voilab-filter.git"
+  },
+  "keywords": [
+    "filter",
+    "data"
+  ],
+  "dependencies": {
+    "lodash": "4.*"
+  },
+  "author": "Joël Poulin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voilab/voilab-filter/issues"
+  },
+  "homepage": "https://github.com/voilab/voilab-filter#readme"
+}
