@@ -16,17 +16,17 @@
             toBoolean: function (value) {
                 value = value + "";
                 switch (value.toLowerCase().trim()) {
-                case "true":
-                case "yes":
-                case "1":
-                    return true;
-                case "false":
-                case "no":
-                case "0":
-                case null:
-                    return false;
-                default:
-                    return Boolean(value);
+                    case "true":
+                    case "yes":
+                    case "1":
+                        return true;
+                    case "false":
+                    case "no":
+                    case "0":
+                    case null:
+                        return false;
+                    default:
+                        return Boolean(value);
                 }
             }
         },
@@ -38,6 +38,12 @@
             }
 
             return lodash.mapValues(record, function (value, key) {
+
+                // if mapper value is a function, just run it with value as only parameter
+                if (lodash.isFunction(mapper[key])) {
+                    return mapper[key](value);
+                }
+
                 // if mapper value is an Object, usually it's because 'value' is
                 // also an object or an Array. Here we call recursively filter() function
                 // on the value children.
@@ -69,11 +75,6 @@
                     }
 
                     return mapper[key];
-                }
-
-                // if mapper value is a function, just run it with value as only parameter
-                if (lodash.isFunction(mapper[key])) {
-                    return mapper[key](value);
                 }
 
                 // otherwise, no mapping found, return value...
