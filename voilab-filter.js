@@ -18,10 +18,12 @@
                 switch (value.toLowerCase().trim()) {
                     case "true":
                     case "yes":
+                    case "oui":
                     case "1":
                         return true;
                     case "false":
                     case "no":
+                    case "non":
                     case "0":
                     case null:
                         return false;
