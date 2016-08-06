@@ -1,6 +1,6 @@
 {
   "name": "voilab-filter",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Library that can convert an object to a new filtered one, using a key-mapper",
   "main": "voilab-filter.js",
   "scripts": {
